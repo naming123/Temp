@@ -1,0 +1,48 @@
+# Qualcomm AI Hub + TF Lite Benchmark Tool (https://docs.qualcomm.com/doc/80-70015-54/topic/tflite-landing-page.html)
+
+1. Download model (https://aihub.qualcomm.com/mobile/models?devices=Samsung+Galaxy+S25&isQuantized=true&runtime=tflite)
+    Inception V3 quantized: https://aihub.qualcomm.com/mobile/models/inception_v3?domain=Computer+Vision&useCase=Image+Classification&devices=Samsung+Galaxy+S25&isQuantized=true&runtime=tflite
+    (TFLite runtime + w8a8)
+    Labels: wget https://raw.githubusercontent.com/quic/ai-hub-models/refs/heads/main/qai_hub_models/labels/imagenet_labels.txt
+
+2. Check architecture (https://docs.qualcomm.com/doc/80-70018-54/topic/arch.html?utm_source=chatgpt.com)
+    Hexagon Tensor Processor (Back end for the Hexagon Tensor Processor hardware accelerator)
+        aarch64-android
+            libQnnHtp.so (Library used for communication between the Arm CPU and the Hexagon Tensor Processor.)
+            libQnnHtpPrepare.so (Hexagon Tensor Processor library running on the CPU side. This library prepares the graph and optimizes the execution graph at runtime.)
+            libQnnHtpV68Stub.so (Hexagon Tensor Processor proxy library on the CPU side, communicating with the Skel library loaded on the Hexagon Tensor Processor.)
+        hexagon-v79 (Galaxy S25 Snapdragon 8 Elite for Galaxy)
+            libQnnHtpV79Skel.so (Hexagon Tensor Processor native library with optimized kernel/operator implementation for the Hexagon Tensor Processor.)
+
+3. Download QAIRT (https://docs.qualcomm.com/doc/80-63442-10/topic/general_overview.html)
+    Follow the tutorial: https://docs.qualcomm.com/doc/80-63442-10/topic/qnn_tutorial_linux_host.html
+                         https://docs.qualcomm.com/doc/80-63442-10/topic/qnn_tutorial_linux_host_linux_target.html
+
+4. Run (options: https://docs.qualcomm.com/doc/80-70018-54/topic/sample-applications.html?utm_source=chatgpt.com#external-delegate-options-for-qnn-delegate)
+    export QAIRT_HOME=/data/local/tmp/JY/tools/Qualcomm/QAIRT/qairt/2.32.0.250228
+    export PATH=${QAIRT_HOME}/bin/aarch64-android/:${PATH}
+    export LD_LIBRARY_PATH=${QAIRT_HOME}/lib/aarch64-android:${LD_LIBRARY_PATH}
+    export ADSP_LIBRARY_PATH=${QAIRT_HOME}/lib/hexagon-v79/unsigned
+
+    /data/local/tmp/JY/bin/tf_benchmark_tool \
+    --graph=/data/local/tmp/JY/models/Qualcomm/inception_v3-inception-v3-w8a8.tflite \
+    --external_delegate_path=/data/local/tmp/JY/tools/Qualcomm/QAIRT/qairt/2.32.0.250228/lib/aarch64-android/libQnnTFLiteDelegate.so \
+    --external_delegate_options='backend_type:htp;library_path:/data/local/tmp/JY/tools/Qualcomm/QAIRT/qairt/2.32.0.250228/lib/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/JY/tools/Qualcomm/QAIRT/qairt/2.32.0.250228/lib/hexagon-v79/unsigned;htp_precision:0;htp_performance_mode:1'
+
+    taskset 10 /data/local/tmp/JY/bin/tf_benchmark_tool \
+    --graph=/data/local/tmp/JY/models/Qualcomm/inception_v3-inception-v3-w8a8.tflite \
+    --num_runs=10000000000 \
+    --min_secs=60 \
+    --max_secs=60 \
+    --num_threads=1 \
+    --warmup_runs=10 \
+    --warmup_min_secs=1 \
+    --require_full_delegation=true \
+    --external_delegate_path=/data/local/tmp/JY/tools/Qualcomm/QAIRT/qairt/2.32.0.250228/lib/aarch64-android/libQnnTFLiteDelegate.so \
+    --external_delegate_options='backend_type:htp;library_path:/data/local/tmp/JY/tools/Qualcomm/QAIRT/qairt/2.32.0.250228/lib/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/JY/tools/Qualcomm/QAIRT/qairt/2.32.0.250228/lib/hexagon-v79/unsigned;htp_precision:0;htp_performance_mode:1'
+
+References
+    https://github.com/quic/ai-hub-apps
+    https://github.com/quic/ai-hub-models
+    https://docs.qualcomm.com/doc/80-63442-10/topic/general_overview.html
+    https://docs.qualcomm.com/nav/home?product=1601111740010412

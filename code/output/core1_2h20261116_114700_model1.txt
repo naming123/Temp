@@ -1,0 +1,25 @@
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [2147483647]
+INFO: Min runs duration (seconds): [7200]
+INFO: Max runs duration (seconds): [7200]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/inception_v3.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/inception_v3.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 144 out of 144 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+INFO: Explicitly applied EXTERNAL delegate, and the model graph will be completely executed by the delegate.
+INFO: The input model file size (MB): 24.5205
+INFO: Initialized session in 887.841ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 7200 seconds.
+INFO: count=1288 first=1887 curr=763 min=759 max=1887 avg=769.995 std=32 p5=762 median=766 p95=791
+
+INFO: Running benchmark for at least 2147483647 iterations and at least 7200 seconds but terminate if exceeding 7200 seconds.

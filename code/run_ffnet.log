@@ -1,0 +1,15 @@
+skin zone: /sys/class/thermal/thermal_zone54 (front_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone55 (back_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone56 (user_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone57 (user_front_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone58 (user_back_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone60 (skin-msm-therm) -> disabled
+skin zone: /sys/class/thermal/thermal_zone61 (quiet-therm) -> disabled
+skin zone restored: /sys/class/thermal/thermal_zone54 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone55 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone56 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone57 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone58 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone60 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone61 -> enabled
+saved: ./output/ffnet78s_w8a8_core2_15min20261112_164504.txt

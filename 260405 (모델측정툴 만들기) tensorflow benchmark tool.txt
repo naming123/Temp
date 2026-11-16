@@ -1,0 +1,39 @@
+RTX 4090v4
+
+# bazel install
+    $ sudo apt install apt-transport-https curl gnupg
+    $ curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor >bazel-archive-keyring.gpg
+    $ sudo mv bazel-archive-keyring.gpg /usr/share/keyrings
+    $ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+    $ sudo apt update && sudo apt install bazel
+    $ sudo apt install default-jdk zip unzip
+
+# Android driver install
+    $ sudo apt install android-tools-adb android-tools-fastboot
+    $ sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+
+# Tensorflow v2.19.0 && bazel 6.5.0 && Python 3.10.x && clang install
+    $ sudo apt install bazel-6.5.0
+    $ sudo apt install build-essential g++ libc6-dev libstdc++-12-dev
+    $ sudo apt install clang libc++-dev libc++abi-dev
+
+# Android NDK, SDK install
+    Android NDK -> r26d (26)
+    Android SDK -> Download from Android Studio (36)
+
+# Compile
+    # Path
+    $ export CC=clang
+    $ export CXX=clang++
+    $ export ANDROID_NDK_HOME=/home/smrl/JY/MTP/tools/android-ndk-r26d
+    $ export ANDROID_NDK_API_LEVEL=26
+    $ export ANDROID_SDK_HOME=/home/smrl/Android/Sdk
+    $ export ANDROID_SDK_API_LEVEL=36
+    $ export ANDROID_BUILD_TOOLS_VERSION=36.0.0
+
+    # Check
+    $ ls $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/25/ | grep crtbegin_dynamic.o
+
+    # Build
+    $ ./configure
+    $ bazel build -c opt --config=android_arm64 --verbose_failures tensorflow/lite/tools/benchmark:benchmark_model

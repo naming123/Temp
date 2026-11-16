@@ -1,0 +1,68 @@
+===== calibration (15s, no sleep) =====
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [2147483647]
+INFO: Min runs duration (seconds): [15]
+INFO: Max runs duration (seconds): [15]
+INFO: Inter-run delay (seconds): [0]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/inception_v3.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/inception_v3.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 144 out of 144 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+INFO: Explicitly applied EXTERNAL delegate, and the model graph will be completely executed by the delegate.
+INFO: The input model file size (MB): 24.5205
+INFO: Initialized session in 649.677ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 15 seconds.
+INFO: count=1297 first=1651 curr=766 min=738 max=1651 avg=764.676 std=26 p5=757 median=761 p95=785
+
+INFO: Running benchmark for at least 2147483647 iterations and at least 15 seconds but terminate if exceeding 15 seconds.
+INFO: count=19489 first=782 curr=769 min=753 max=846 avg=762.803 std=7 p5=757 median=761 p95=783
+
+INFO: Inference timings in us: Init: 649677, First inference: 1651, Warmup (avg): 764.676, Inference (avg): 762.803
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=246.434 overall=246.434
+===== setting =====
+duty=80 run_delay=0.000191 avg_us=762.803 mask=08 iters=1887774
+===== main run (1887774 iter) =====
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [1887774]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [86400]
+INFO: Inter-run delay (seconds): [0.000191]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/inception_v3.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/inception_v3.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 144 out of 144 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+INFO: Explicitly applied EXTERNAL delegate, and the model graph will be completely executed by the delegate.
+INFO: The input model file size (MB): 24.5205
+INFO: Initialized session in 624.934ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 86400 seconds.
+INFO: count=961 first=1633 curr=775 min=751 max=1633 avg=779.026 std=28 p5=772 median=776 p95=795
+
+INFO: Running benchmark for at least 1887774 iterations and at least 0 seconds but terminate if exceeding 86400 seconds.
+INFO: count=1887774 first=804 curr=779 min=762 max=5420 avg=779.583 std=18 p5=773 median=778 p95=791
+
+INFO: Inference timings in us: Init: 624934, First inference: 1633, Warmup (avg): 779.026, Inference (avg): 779.583
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=248.645 overall=248.645
+===== result =====
+iters=1887774 wall_time=1968s inference_avg_us=779.583 actual_duty=80.3%
