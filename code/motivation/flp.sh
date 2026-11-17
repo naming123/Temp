@@ -10,7 +10,7 @@ MODEL_PATH=/data/local/tmp/SM/model/inception_v3.tflite
 MODEL_TAG=$(basename "$MODEL_PATH" .tflite)   # 파일 이름에서 자동으로: inception_v3
 
 # 실험 설정
-CORE_MASK=04         # 모델 코어: 80 = cpu7 (BIG)
+CORE_MASK=80         # 모델 코어: 80 = cpu7 (BIG)
 LOGGER_MASK=80        # 로거 코어: 80 = cpu7 (BIG)
 RUN_SECS=1800         # 본 실험 시간(초), 30분
 USE_NPU=0             # 0 = CPU에서 직접 계산(BIG을 데움), 1 = HTP(NPU) delegate 사용

@@ -11,7 +11,7 @@ IDLE_SECS=10          # 로거 시작 후 첫 부하까지 대기(초), 기준 �
 LOAD_SECS=20          # 코어 하나에 부하 거는 시간(초)
 REST_SECS=60          # 코어 사이 대기(초)
 ZONES="10 11 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29"   # cpuss-0~3 + cpu-*-*-* (24 = aoss-1 제외)
-LOGGER=../logger/logger261110_100ms       # 로거 실행 파일
+LOGGER=./logger       # 로거 실행 파일
 LOGGER_MASK=01        # 로거는 cpu0에 고정
 
 POL=/sys/devices/system/cpu/cpufreq/policy5
