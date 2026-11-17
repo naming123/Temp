@@ -10,7 +10,7 @@ MODEL_PATH=/data/local/tmp/SM/model/inception_v3.tflite
 MODEL_TAG=$(basename "$MODEL_PATH" .tflite)   # 파일 이름에서 자동으로: inception_v3
 
 # 실험 설정
-CORE=4                # 돌릴 코어 (cpu 번호는 0부터). MID는 2~6. 로거는 cpu0
+CORE=5                # 돌릴 코어 (cpu 번호는 0부터). MID는 2~6. 로거는 cpu0
 DUTY=80               # 부하율(%), 추론 / (추론 + sleep)의 시간 비율
 ITERS=""              # 본 실험 iter 수. 비워 두면 이번 측정값으로 RUN_SECS에 맞춰 정함. 다른 코어와 같게 하려면 첫 코어 결과의 값을 넣을 것
 RUN_SECS=1800         # ITERS를 비웠을 때 iter 수를 정하는 기준 시간(초), 30분

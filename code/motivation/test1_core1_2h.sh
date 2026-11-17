@@ -9,7 +9,7 @@ OUTPUT_NAME=./output/core1_2h$(date +%Y%m%d_%H%M%S)
 OUTPUT_FILE=$OUTPUT_NAME.txt
 
 # 로거 시작
-taskset 01 /data/local/tmp/SM/logger/logger261104_v2 "$OUTPUT_NAME" &
+taskset 01 /data/local/tmp/SM/logger/logger261110_100ms "$OUTPUT_NAME" &
 LOGGER_PID=$!
 sleep 1
 

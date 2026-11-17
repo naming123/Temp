@@ -24,7 +24,7 @@
 #include <time.h>
 #include <unistd.h>
 
-#define SAMPLING_TIME_MS 1
+#define SAMPLING_TIME_MS 100
 #define NUM_CPUS         8
 #define NUM_STAT_FIELDS  8   // user nice system idle iowait irq softirq steal (guest is already in user)
 
@@ -52,12 +52,12 @@ static const struct temp_group TEMP_GROUP[] = {
     // core order inside cpu-1-* / cpu-2-* is ASSUMED sequential (to be verified with taskset)
     {"LIT0_temp",       {28}, 1},                              // cpu-0-0-0
     {"LIT1_temp",       {29}, 1},                              // cpu-0-1-0
-    {"MID2_temp",       {20, 21}, 2},                          // cpu-1-0-0/1
-    {"MID3_temp",       {22, 23}, 2},                          // cpu-1-1-0/1
-    {"MID4_temp",       {25, 26, 27}, 3},                      // cpu-1-2-0/1/2 (zone24 = aoss-1, excluded)
-    {"MID5_temp",       {14, 15}, 2},                          // cpu-2-0-0/1
-    {"MID6_temp",       {16, 17}, 2},                          // cpu-2-1-0/1
-    {"BIG7_temp",       {18, 19}, 2},                          // cpu-2-2-0/1
+    {"MID2_temp",       {14, 15}, 2},                          // cpu-2-0-0/1
+    {"MID3_temp",       {16, 17}, 2},                          // cpu-2-1-0/1
+    {"MID4_temp",       {18, 19}, 2},                          // cpu-2-2-0/1
+    {"MID5_temp",       {20, 21}, 2},                          // cpu-1-0-0/1 저전력MID
+    {"MID6_temp",       {22, 23}, 2},                          // cpu-1-1-0/1 저전력MID
+    {"BIG7_temp",       {25, 26, 27}, 3},                      // cpu-1-2-0/1/2 (zone24 = aoss-1, excluded)
     {"cpuss_temp",      {10, 11, 12, 13}, 4},                  // CPU subsystem shared area
     {"gpuss_temp",      {41, 42, 43, 44, 45, 46, 47, 48}, 8},
     {"nsphvx_temp",     {30, 31}, 2},                          // NPU HVX
