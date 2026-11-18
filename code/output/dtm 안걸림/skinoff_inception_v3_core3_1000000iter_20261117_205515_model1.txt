@@ -1,0 +1,39 @@
+===== setting =====
+core_mask=08 logger_mask=08 num_runs=1000000 max_secs=3600 skin_off=1
+skin zones disabled: /sys/class/thermal/thermal_zone53 /sys/class/thermal/thermal_zone54 /sys/class/thermal/thermal_zone56 /sys/class/thermal/thermal_zone57 /sys/class/thermal/thermal_zone58 /sys/class/thermal/thermal_zone60 /sys/class/thermal/thermal_zone61
+battery temp at start: 271 (0.1도 단위)
+===== main run =====
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [1000000]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [3600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/inception_v3.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/inception_v3.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 144 out of 144 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+INFO: Explicitly applied EXTERNAL delegate, and the model graph will be completely executed by the delegate.
+INFO: The input model file size (MB): 24.5205
+INFO: Initialized session in 852.323ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 3600 seconds.
+INFO: count=1270 first=1630 curr=787 min=741 max=1630 avg=780.797 std=44 p5=758 median=777 p95=804
+
+INFO: Running benchmark for at least 1000000 iterations and at least 0 seconds but terminate if exceeding 3600 seconds.
+INFO: count=1000000 first=794 curr=761 min=735 max=4224 avg=766.427 std=26 p5=758 median=761 p95=787
+
+INFO: Inference timings in us: Init: 852323, First inference: 1630, Warmup (avg): 780.797, Inference (avg): 766.427
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=248.012 overall=248.012
+===== count =====
+target: 1000000 runs
+done: count=1000000 (도구가 찍은 값)
+battery temp at end: 405 (0.1도 단위)

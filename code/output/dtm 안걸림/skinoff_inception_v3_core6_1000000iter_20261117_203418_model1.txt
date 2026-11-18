@@ -1,0 +1,30 @@
+===== setting =====
+core_mask=40 logger_mask=40 num_runs=1000000 max_secs=3600 skin_off=1
+skin zones disabled: /sys/class/thermal/thermal_zone54 /sys/class/thermal/thermal_zone55 /sys/class/thermal/thermal_zone60 /sys/class/thermal/thermal_zone61 /sys/class/thermal/thermal_zone62 /sys/class/thermal/thermal_zone63 /sys/class/thermal/thermal_zone64
+battery temp at start: 301 (0.1도 단위)
+===== main run =====
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [1000000]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [3600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/inception_v3.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/inception_v3.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 144 out of 144 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+INFO: Explicitly applied EXTERNAL delegate, and the model graph will be completely executed by the delegate.
+INFO: The input model file size (MB): 24.5205
+INFO: Initialized session in 1568.46ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 3600 seconds.
+INFO: count=1187 first=1718 curr=824 min=797 max=2072 avg=824.934 std=98 p5=805 median=813 p95=839
+
+INFO: Running benchmark for at least 1000000 iterations and at least 0 seconds but terminate if exceeding 3600 seconds.

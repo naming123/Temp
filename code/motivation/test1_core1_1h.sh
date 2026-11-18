@@ -9,8 +9,8 @@ export ADSP_LIBRARY_PATH=${QAIRT_HOME}/hexagon-v75/unsigned
 # 모델과 실험 설정
 MODEL_PATH=/data/local/tmp/SM/model/inception_v3.tflite
 MODEL_TAG=$(basename "$MODEL_PATH" .tflite)   # 파일 이름에서 자동으로: inception_v3
-CORE_MASK=04          # 모델 코어: 04 = cpu2, 08 = cpu3, 10 = cpu4
-LOGGER_MASK=04        # 로거 코어: 04 = cpu2, 08 = cpu3, 10 = cpu4
+CORE_MASK=10          # 모델 코어: 04 = cpu2, 08 = cpu3, 10 = cpu4
+LOGGER_MASK=10        # 로거 코어: 04 = cpu2, 08 = cpu3, 10 = cpu4
 NUM_RUNS=1000000      # 본 실행 횟수
 MAX_SECS=3600         # 안전용 상한(초). 느려져도 이 시간이 넘으면 끝남
 AVG_US=771.5          # 추론 1회 시간(us). 끊겼을 때 돈 횟수 추정에만 씀 (이전 실행 워밍업 avg)
