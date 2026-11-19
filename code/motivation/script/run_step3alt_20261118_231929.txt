@@ -1,0 +1,3 @@
+[23:19:29] waiting for run_step23: ./run_step23_20261118_231342.txt
+[23:19:29] run_step23 done
+[23:19:29] ===== step3_alt_core2.sh =====

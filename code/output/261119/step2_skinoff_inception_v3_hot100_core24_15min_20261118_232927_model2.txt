@@ -1,0 +1,40 @@
+===== setting =====
+model=/data/local/tmp/SM/model/dump/inception_v3.tflite (CPU, delegate 없음)
+core_mask=10 logger_mask=14 heat_secs=900 skin_off=1
+pair: model1 core_mask=04, model2 core_mask=10
+skin zones disabled: /sys/class/thermal/thermal_zone54 /sys/class/thermal/thermal_zone55 /sys/class/thermal/thermal_zone56 /sys/class/thermal/thermal_zone57 /sys/class/thermal/thermal_zone58 /sys/class/thermal/thermal_zone59 /sys/class/thermal/thermal_zone61
+logger start: 237.69 s (부팅 후 경과 시간)
+battery temp at start: 319 (0.1도 단위)
+===== main run =====
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [100000000]
+INFO: Min runs duration (seconds): [900]
+INFO: Max runs duration (seconds): [900]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/dump/inception_v3.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [1]
+INFO: Loaded model /data/local/tmp/SM/model/dump/inception_v3.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+VERBOSE: Replacing 131 out of 144 node(s) with delegate (TfLiteXNNPackDelegate) node, yielding 25 partitions for subgraph 0.
+INFO: The input model file size (MB): 24.5205
+INFO: Initialized session in 126.518ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 900 seconds.
+INFO: count=18 first=62375 curr=53278 min=53251 max=62375 avg=55627.9 std=3675 p5=53251 median=53406 p95=62375
+
+INFO: Running benchmark for at least 100000000 iterations and at least 900 seconds but terminate if exceeding 900 seconds.
+INFO: count=16882 first=53547 curr=53337 min=52701 max=58039 avg=53295.2 std=123 p5=53066 median=53306 p95=53470
+
+INFO: Inference timings in us: Init: 126518, First inference: 62375, Warmup (avg): 55627.9, Inference (avg): 53295.2
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=60.9297 overall=63.5
+model end: 1144.93 s
+===== count =====
+target: 900 s
+done: count=16882 (도구가 찍은 값)
+model start: 243.68 s, model end: 1144.93 s, model time: 901.25 s (부팅 후 경과 시간 기준)
+battery temp at end: 385 (0.1도 단위)

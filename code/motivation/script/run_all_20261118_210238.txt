@@ -1,0 +1,25 @@
+[21:02:38] ===== heatmap_core3.sh =====
+[21:03:16] boot completed: 38 s
+[21:20:31] start: pid 8245
+[21:21:01] end
+[21:21:01] ===== heatmap_core4.sh =====
+[21:21:39] boot completed: 38 s
+[21:26:53] cooling total (앞 실험 끝 ~ 냉각 완료, 재부팅 포함): 352 s
+[21:42:01] start: pid 8166
+[21:42:31] end
+[21:42:31] ===== heatmap_core5.sh =====
+[21:43:10] boot completed: 39 s
+[21:49:48] cooling total (앞 실험 끝 ~ 냉각 완료, 재부팅 포함): 437 s
+[22:04:56] start: pid 8255
+[22:05:26] end
+[22:05:26] ===== heatmap_core6.sh =====
+[22:06:05] boot completed: 39 s
+[22:07:41] cooling total (앞 실험 끝 ~ 냉각 완료, 재부팅 포함): 135 s
+[22:22:50] start: pid 7804
+[22:23:20] end
+[22:23:20] ===== heatmap_core7.sh =====
+[22:23:58] boot completed: 37 s
+[22:25:55] cooling total (앞 실험 끝 ~ 냉각 완료, 재부팅 포함): 155 s
+[22:41:02] start: pid 7854
+[22:41:33] end
+[22:41:33] all done

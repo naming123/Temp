@@ -1,0 +1,4 @@
+[23:07:23] waiting for run_all: ./run_all_20261118_210238.txt
+[23:07:23] run_all done
+run_step23.sh: line 39: adb: command not found
+[23:07:23] adb push failed -> 멈춤

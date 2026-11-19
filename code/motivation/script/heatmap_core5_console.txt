@@ -1,0 +1,20 @@
+skin zone: /sys/class/thermal/thermal_zone54 (skin-msm-therm) -> disabled
+skin zone: /sys/class/thermal/thermal_zone55 (quiet-therm) -> disabled
+skin zone: /sys/class/thermal/thermal_zone61 (front_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone62 (back_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone63 (user_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone64 (user_front_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone65 (user_back_temp) -> disabled
+skin zone restored: /sys/class/thermal/thermal_zone54 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone55 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone61 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone62 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone63 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone64 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone65 -> enabled
+===== count =====
+target: 900 s
+done: count=6224 (도구가 찍은 값)
+model start: 421.94 s, model end: 1323.74 s, model time: 901.80 s (부팅 후 경과 시간 기준)
+battery temp at end: 307 (0.1도 단위)
+saved: ./output/heatmap_skinoff_inception_v3_hot100_core5_15min_20261118_214947.txt

@@ -1,0 +1,44 @@
+===== setting =====
+model=/data/local/tmp/SM/model/real_esrgan_x4plus.tflite
+core_mask=20 logger_mask=01 num_runs=40000 max_secs=3600 skin_off=1
+skin zones disabled: /sys/class/thermal/thermal_zone54 /sys/class/thermal/thermal_zone55 /sys/class/thermal/thermal_zone56 /sys/class/thermal/thermal_zone57 /sys/class/thermal/thermal_zone58 /sys/class/thermal/thermal_zone60 /sys/class/thermal/thermal_zone61
+logger start: 135.71 s (부팅 후 경과 시간)
+battery temp at start: 305 (0.1도 단위)
+===== main run =====
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [40000]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [3600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/real_esrgan_x4plus.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/real_esrgan_x4plus.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 1898 out of 1898 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+INFO: Explicitly applied EXTERNAL delegate, and the model graph will be completely executed by the delegate.
+INFO: The input model file size (MB): 17.5492
+INFO: Initialized session in 78980.2ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 3600 seconds.
+INFO: count=45 first=23303 curr=23640 min=20956 max=24675 avg=22402.6 std=735 p5=21249 median=22432 p95=23632
+
+INFO: Running benchmark for at least 40000 iterations and at least 0 seconds but terminate if exceeding 3600 seconds.
+INFO: count=40000 first=23812 curr=27666 min=22363 max=40995 avg=26301.9 std=1086 p5=24452 median=26345 p95=27989
+
+INFO: Inference timings in us: Init: 78980168, First inference: 23303, Warmup (avg): 22402.6, Inference (avg): 26301.9
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=669.102 overall=669.102
+model end: 1274.73 s
+===== count =====
+target: 40000 runs
+done: count=40000 (도구가 찍은 값)
+model start: 141.60 s, model end: 1274.73 s, model time: 1133.13 s (부팅 후 경과 시간 기준)
+total time: 1796.03 s (첫 모델 시작 ~ 마지막 모델 끝)
+battery temp at end: 465 (0.1도 단위)

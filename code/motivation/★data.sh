@@ -1,1 +1,1 @@
-for z in /sys/class/thermal/thermal_zone*; do t=$(cat $z/type); case $t in cpu*) echo "$(basename $z) $t $(cat $z/temp)";; esac; done
+cd data/local/tmp/SM/code/motivation

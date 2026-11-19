@@ -1,0 +1,6 @@
+[20:29:21] ===== heatmap_core2.sh =====
+[20:30:00] boot completed: 39 s
+[20:50:54] start: pid 8369
+[20:51:24] end
+[20:51:24] ===== heatmap_core3.sh =====
+[20:52:03] boot completed: 38 s

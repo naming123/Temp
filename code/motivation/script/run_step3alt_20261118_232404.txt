@@ -1,0 +1,9 @@
+[23:24:04] waiting for run_all + run_step23 (all done x 2)
+[23:24:04] all done x 2: ./run_all_20261118_210238.txt, ./run_step23_20261118_232037.txt
+step3_alt_core2.sh: 1 file pushed, 0 skipped. 26.9 MB/s (11604 bytes in 0.000s)
+step3_alt_core6.sh: 1 file pushed, 0 skipped. 37.8 MB/s (11604 bytes in 0.000s)
+2 files pushed, 0 skipped. 1.1 MB/s (23208 bytes in 0.020s)
+[23:24:04] pushed: step3_alt_core2.sh step3_alt_core6.sh
+[23:24:04] ===== step3_alt_core2.sh =====
+[23:24:42] boot completed: 38 s
+[23:25:13] cooling failed -> 멈춤

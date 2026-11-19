@@ -1,0 +1,16 @@
+[23:28:58] waiting for run_step23.sh (process)
+[01:37:28] run_step23 done: ./run_step23_20261118_232037.txt
+step3_alt_core2.sh: 1 file pushed, 0 skipped. 25.7 MB/s (11604 bytes in 0.000s)
+step3_alt_core6.sh: 1 file pushed, 0 skipped. 38.0 MB/s (11604 bytes in 0.000s)
+2 files pushed, 0 skipped. 0.4 MB/s (23208 bytes in 0.055s)
+[01:37:29] pushed: step3_alt_core2.sh step3_alt_core6.sh
+[01:37:29] ===== step3_alt_core2.sh =====
+[01:38:07] boot completed: 37 s
+[02:08:22] start: pid 8865
+[02:08:53] end
+[02:08:53] ===== step3_alt_core6.sh =====
+[02:09:31] boot completed: 38 s
+[02:21:34] cooling total (앞 실험 끝 ~ 냉각 완료, 재부팅 포함): 761 s
+[02:37:30] start: pid 8748
+[02:38:00] end
+[02:38:00] all done

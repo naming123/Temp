@@ -1,0 +1,7 @@
+[09:31:14] ===== heatmap_core3.sh =====
+[09:31:52] boot completed: 38 s
+[09:48:16] start: pid 8385
+[09:48:46] end
+[09:48:46] ===== heatmap_core4.sh =====
+[09:49:24] boot completed: 38 s
+[09:51:00] cooling total (앞 실험 끝 ~ 냉각 완료, 재부팅 포함): 134 s

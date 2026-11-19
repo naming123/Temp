@@ -1,0 +1,9 @@
+chunk	kind	model	start_s	end_s	target_runs	count	avg_us	main_s(count x avg)
+1	cpu	inception_v3	747.09	850.19	700	700	144716	101.30
+2	npu	real_esrgan_x4plus	850.44	983.15	2000	2000	22654.8	45.31
+3	cpu	inception_v3	983.40	1086.76	700	700	145229	101.66
+4	npu	real_esrgan_x4plus	1087.00	1220.76	2000	2000	22789.7	45.58
+5	cpu	inception_v3	1221.00	1324.39	700	700	145300	101.71
+6	npu	real_esrgan_x4plus	1324.63	1458.57	2000	2000	22810	45.62
+7	cpu	inception_v3	1458.80	1562.20	700	700	145317	101.72
+8	npu	real_esrgan_x4plus	1562.43	1695.56	2000	2000	22866.2	45.73

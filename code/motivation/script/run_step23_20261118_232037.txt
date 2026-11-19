@@ -1,0 +1,4 @@
+[23:20:37] waiting for run_all: ./run_all_20261118_210238.txt
+[23:20:37] run_all done
+[23:20:37] ===== step2_core23.sh =====
+[23:21:15] boot completed: 38 s

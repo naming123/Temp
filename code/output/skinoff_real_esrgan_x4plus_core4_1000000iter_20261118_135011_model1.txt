@@ -1,0 +1,27 @@
+===== setting =====
+core_mask=10 logger_mask=10 num_runs=1000000 max_secs=3600 skin_off=1
+skin zones disabled: none
+battery temp at start:  (0.1도 단위)
+===== main run =====
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [1000000]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [3600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/real_esrgan_x4plus.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/real_esrgan_x4plus.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 1898 out of 1898 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+===== count =====
+target: 1000000 runs
+stopped early: 본 실행 시작 전에 끊김
+battery temp at end:  (0.1도 단위)

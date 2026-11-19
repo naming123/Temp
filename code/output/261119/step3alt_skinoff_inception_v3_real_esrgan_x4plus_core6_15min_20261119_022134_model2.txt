@@ -1,0 +1,141 @@
+===== setting =====
+model=/data/local/tmp/SM/model/real_esrgan_x4plus.tflite (NPU 전체 위임)
+core_mask=40 logger_mask=40 chunk_runs=2000 max_secs=600 skin_off=1
+chunk_runs 근거: 1회 평균 21060 us (real 단독 스킨 off 워밍업 avg), 60 s를 맨 앞자리만 남기고 버림
+alternate: inception_v3 700회 -> real_esrgan_x4plus 2000회 반복, 900 s가 지나면 새 조각 시작 안 함
+skin zones disabled: /sys/class/thermal/thermal_zone53 /sys/class/thermal/thermal_zone54 /sys/class/thermal/thermal_zone55 /sys/class/thermal/thermal_zone56 /sys/class/thermal/thermal_zone57 /sys/class/thermal/thermal_zone60 /sys/class/thermal/thermal_zone61
+logger start: 741.04 s (부팅 후 경과 시간)
+battery temp at start: 325 (0.1도 단위)
+===== main run =====
+----- chunk 2 (npu) start 850.44 s -----
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [2000]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/real_esrgan_x4plus.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/real_esrgan_x4plus.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 1898 out of 1898 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+INFO: Explicitly applied EXTERNAL delegate, and the model graph will be completely executed by the delegate.
+INFO: The input model file size (MB): 17.5492
+INFO: Initialized session in 85788.1ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 600 seconds.
+INFO: count=48 first=22550 curr=21345 min=20324 max=22550 avg=21171.3 std=477 p5=20393 median=21355 p95=21516
+
+INFO: Running benchmark for at least 2000 iterations and at least 0 seconds but terminate if exceeding 600 seconds.
+INFO: count=2000 first=21441 curr=24130 min=20347 max=32319 avg=22654.8 std=1043 p5=20576 median=22842 p95=24076
+
+INFO: Inference timings in us: Init: 85788119, First inference: 22550, Warmup (avg): 21171.3, Inference (avg): 22654.8
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=669.688 overall=669.688
+chunk end: 983.15 s
+----- chunk 4 (npu) start 1087.00 s -----
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [2000]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/real_esrgan_x4plus.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/real_esrgan_x4plus.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 1898 out of 1898 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+INFO: Explicitly applied EXTERNAL delegate, and the model graph will be completely executed by the delegate.
+INFO: The input model file size (MB): 17.5492
+INFO: Initialized session in 86547.1ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 600 seconds.
+INFO: count=48 first=22275 curr=21361 min=20372 max=22275 avg=21073.6 std=467 p5=20411 median=21345 p95=21517
+
+INFO: Running benchmark for at least 2000 iterations and at least 0 seconds but terminate if exceeding 600 seconds.
+INFO: count=2000 first=20535 curr=24301 min=20302 max=25933 avg=22789.7 std=1032 p5=20877 median=23014 p95=24204
+
+INFO: Inference timings in us: Init: 86547051, First inference: 22275, Warmup (avg): 21073.6, Inference (avg): 22789.7
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=670.277 overall=670.277
+chunk end: 1220.76 s
+----- chunk 6 (npu) start 1324.63 s -----
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [2000]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/real_esrgan_x4plus.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/real_esrgan_x4plus.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 1898 out of 1898 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+INFO: Explicitly applied EXTERNAL delegate, and the model graph will be completely executed by the delegate.
+INFO: The input model file size (MB): 17.5492
+INFO: Initialized session in 86698.6ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 600 seconds.
+INFO: count=48 first=22373 curr=21356 min=20377 max=22373 avg=21097.7 std=478 p5=20408 median=21358 p95=21498
+
+INFO: Running benchmark for at least 2000 iterations and at least 0 seconds but terminate if exceeding 600 seconds.
+INFO: count=2000 first=21475 curr=23727 min=20338 max=28696 avg=22810 std=1070 p5=20986 median=22991 p95=24240
+
+INFO: Inference timings in us: Init: 86698577, First inference: 22373, Warmup (avg): 21097.7, Inference (avg): 22810
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=670.195 overall=670.195
+chunk end: 1458.57 s
+----- chunk 8 (npu) start 1562.43 s -----
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [2000]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/real_esrgan_x4plus.tflite]
+INFO: Signature to run: []
+INFO: Require full delegation: [1]
+INFO: #threads used for CPU inference: [1]
+INFO: External delegate path: [/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnTFLiteDelegate.so]
+INFO: External delegate options: [backend_type:htp;library_path:/data/local/tmp/SM/lib/qairt/aarch64-android/libQnnHtp.so;skel_library_dir:/data/local/tmp/SM/lib/qairt/hexagon-v75/unsigned;htp_precision:0;htp_performance_mode:1]
+INFO: Loaded model /data/local/tmp/SM/model/real_esrgan_x4plus.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: EXTERNAL delegate created.
+VERBOSE: Replacing 1898 out of 1898 node(s) with delegate (TfLiteQnnDelegate) node, yielding 1 partitions for subgraph 0.
+INFO: Explicitly applied EXTERNAL delegate, and the model graph will be completely executed by the delegate.
+INFO: The input model file size (MB): 17.5492
+INFO: Initialized session in 85753ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 600 seconds.
+INFO: count=48 first=21706 curr=20812 min=20387 max=22165 avg=21156.1 std=465 p5=20400 median=21375 p95=21706
+
+INFO: Running benchmark for at least 2000 iterations and at least 0 seconds but terminate if exceeding 600 seconds.
+INFO: count=2000 first=21454 curr=24876 min=20374 max=25780 avg=22866.2 std=1045 p5=21205 median=23051 p95=24265
+
+INFO: Inference timings in us: Init: 85752973, First inference: 21706, Warmup (avg): 21156.1, Inference (avg): 22866.2
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=670.168 overall=670.168
+chunk end: 1695.56 s
+===== count =====
+chunks: 4 (끊긴 조각 0), count 합: 8000, 본 실행 시간 합 (count x avg): 182.24 s
+first chunk start: 747.01 s, last chunk end: 1695.80 s, total: 948.79 s (부팅 후 경과 시간 기준)
+battery temp at end: 343 (0.1도 단위)

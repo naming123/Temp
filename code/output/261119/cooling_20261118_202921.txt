@@ -1,0 +1,20 @@
+cooling for heatmap_core2.sh: start 20:38:52
+cooling wait on device: -187 s
+  start temp cpu-2-0-0 32300
+  start temp cpu-2-0-1 31900
+  start temp cpu-2-1-0 32300
+  start temp cpu-2-1-1 32300
+  start temp cpu-2-2-0 32700
+  start temp cpu-2-2-1 32300
+  start temp cpu-1-0-0 33100
+  start temp cpu-1-0-1 32300
+  start temp cpu-1-1-0 32700
+  start temp cpu-1-1-1 32700
+  start temp cpu-1-2-0 34600
+  start temp cpu-1-2-1 34200
+  start temp cpu-1-2-2 35300
+  start temp nsphmx-0 34200
+  start temp nsphmx-1 34200
+  start temp nsphmx-2 34200
+  start temp nsphmx-3 34200
+cooling for heatmap_core3.sh: start 20:52:04

@@ -1,0 +1,22 @@
+step3b_alone.sh: 1 file pushed, 0 skipped. 22.9 MB/s (9912 bytes in 0.000s)
+step3b_core2.sh: 1 file pushed, 0 skipped. 31.2 MB/s (9912 bytes in 0.000s)
+step3b_core4.sh: 1 file pushed, 0 skipped. 32.1 MB/s (9912 bytes in 0.000s)
+3 files pushed, 0 skipped. 0.6 MB/s (29736 bytes in 0.044s)
+[10:47:50] pushed: step3b_alone.sh step3b_core2.sh step3b_core4.sh
+[10:47:50] ===== 1: step3b_alone.sh =====
+[10:48:27] boot completed: 37 s
+[11:07:45] start: pid 7676
+[11:08:16] end
+[11:08:16] ===== 2: step3b_core2.sh =====
+[11:08:53] boot completed: 37 s
+[11:23:49] cooling total (앞 실험 끝 ~ 냉각 완료, 재부팅 포함): 933 s
+[11:44:07] start: pid 8799
+[11:44:37] end
+[11:44:37] ===== 3: step3b_core4.sh =====
+[11:45:15] boot completed: 38 s
+[11:47:02] cooling total (앞 실험 끝 ~ 냉각 완료, 재부팅 포함): 144 s
+[12:07:24] start: pid 7943
+[12:07:54] end
+[12:07:54] ===== 4: step3b_alone.sh =====
+[12:08:32] boot completed: 38 s
+[12:28:44] cooling total (앞 실험 끝 ~ 냉각 완료, 재부팅 포함): 1250 s

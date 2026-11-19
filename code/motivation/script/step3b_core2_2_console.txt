@@ -1,0 +1,7 @@
+skin zone: /sys/class/thermal/thermal_zone53 (front_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone54 (back_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone55 (user_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone56 (user_front_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone57 (user_back_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone60 (skin-msm-therm) -> disabled
+skin zone: /sys/class/thermal/thermal_zone61 (quiet-therm) -> disabled

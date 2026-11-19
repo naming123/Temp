@@ -1,0 +1,25 @@
+skin zone: /sys/class/thermal/thermal_zone53 (front_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone54 (back_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone55 (user_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone56 (user_front_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone57 (user_back_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone60 (skin-msm-therm) -> disabled
+skin zone: /sys/class/thermal/thermal_zone61 (quiet-therm) -> disabled
+skin zone restored: /sys/class/thermal/thermal_zone53 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone54 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone55 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone56 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone57 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone60 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone61 -> enabled
+./output/step3alt_skinoff_inception_v3_real_esrgan_x4plus_core6_15min_20261119_022134_model1.txt
+===== count =====
+chunks: 4 (끊긴 조각 0), count 합: 2800, 본 실행 시간 합 (count x avg): 406.39 s
+first chunk start: 747.01 s, last chunk end: 1695.80 s, total: 948.79 s (부팅 후 경과 시간 기준)
+battery temp at end: 343 (0.1도 단위)
+./output/step3alt_skinoff_inception_v3_real_esrgan_x4plus_core6_15min_20261119_022134_model2.txt
+===== count =====
+chunks: 4 (끊긴 조각 0), count 합: 8000, 본 실행 시간 합 (count x avg): 182.24 s
+first chunk start: 747.01 s, last chunk end: 1695.80 s, total: 948.79 s (부팅 후 경과 시간 기준)
+battery temp at end: 343 (0.1도 단위)
+saved: ./output/step3alt_skinoff_inception_v3_real_esrgan_x4plus_core6_15min_20261119_022134.txt

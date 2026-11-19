@@ -1,0 +1,27 @@
+skin zone: /sys/class/thermal/thermal_zone54 (front_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone55 (back_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone56 (user_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone57 (user_front_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone58 (user_back_temp) -> disabled
+skin zone: /sys/class/thermal/thermal_zone60 (skin-msm-therm) -> disabled
+skin zone: /sys/class/thermal/thermal_zone61 (quiet-therm) -> disabled
+skin zone restored: /sys/class/thermal/thermal_zone54 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone55 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone56 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone57 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone58 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone60 -> enabled
+skin zone restored: /sys/class/thermal/thermal_zone61 -> enabled
+./output/step2_skinoff_inception_v3_hot100_core26_15min_20261118_235838_model1.txt
+===== count =====
+target: 900 s
+done: count=16622 (도구가 찍은 값)
+model start: 798.21 s, model end: 1699.47 s, model time: 901.26 s (부팅 후 경과 시간 기준)
+battery temp at end: 375 (0.1도 단위)
+./output/step2_skinoff_inception_v3_hot100_core26_15min_20261118_235838_model2.txt
+===== count =====
+target: 900 s
+done: count=15001 (도구가 찍은 값)
+model start: 798.21 s, model end: 1699.94 s, model time: 901.73 s (부팅 후 경과 시간 기준)
+battery temp at end: 375 (0.1도 단위)
+saved: ./output/step2_skinoff_inception_v3_hot100_core26_15min_20261118_235838.txt

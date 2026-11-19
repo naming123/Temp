@@ -1,0 +1,125 @@
+===== setting =====
+model=/data/local/tmp/SM/model/dump/inception_v3.tflite (CPU, delegate 없음)
+core_mask=40 logger_mask=40 chunk_runs=700 max_secs=600 skin_off=1
+chunk_runs 근거: ./output/heatmap_skinoff_inception_v3_hot100_core6_15min_20261118_220741_model1.txt Inference (avg) 80805.4 us, 60 s를 맨 앞자리만 남기고 버림
+alternate: inception_v3 700회 -> real_esrgan_x4plus 2000회 반복, 900 s가 지나면 새 조각 시작 안 함
+skin zones disabled: /sys/class/thermal/thermal_zone53 /sys/class/thermal/thermal_zone54 /sys/class/thermal/thermal_zone55 /sys/class/thermal/thermal_zone56 /sys/class/thermal/thermal_zone57 /sys/class/thermal/thermal_zone60 /sys/class/thermal/thermal_zone61
+logger start: 741.04 s (부팅 후 경과 시간)
+battery temp at start: 325 (0.1도 단위)
+===== main run =====
+----- chunk 1 (cpu) start 747.09 s -----
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [700]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/dump/inception_v3.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [1]
+INFO: Loaded model /data/local/tmp/SM/model/dump/inception_v3.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+VERBOSE: Replacing 131 out of 144 node(s) with delegate (TfLiteXNNPackDelegate) node, yielding 25 partitions for subgraph 0.
+INFO: The input model file size (MB): 24.5205
+INFO: Initialized session in 170.19ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 600 seconds.
+INFO: count=10 first=147887 curr=145640 min=143508 max=147887 avg=145207 std=1484 p5=143508 median=145640 p95=147887
+
+INFO: Running benchmark for at least 700 iterations and at least 0 seconds but terminate if exceeding 600 seconds.
+INFO: count=700 first=143883 curr=144063 min=141771 max=147010 avg=144716 std=1148 p5=143436 median=144002 p95=146351
+
+INFO: Inference timings in us: Init: 170190, First inference: 147887, Warmup (avg): 145207, Inference (avg): 144716
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=61.0234 overall=63
+chunk end: 850.19 s
+----- chunk 3 (cpu) start 983.40 s -----
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [700]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/dump/inception_v3.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [1]
+INFO: Loaded model /data/local/tmp/SM/model/dump/inception_v3.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+VERBOSE: Replacing 131 out of 144 node(s) with delegate (TfLiteXNNPackDelegate) node, yielding 25 partitions for subgraph 0.
+INFO: The input model file size (MB): 24.5205
+INFO: Initialized session in 71.212ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 600 seconds.
+INFO: count=10 first=147604 curr=144704 min=143792 max=147604 avg=145386 std=1316 p5=143792 median=145940 p95=147604
+
+INFO: Running benchmark for at least 700 iterations and at least 0 seconds but terminate if exceeding 600 seconds.
+INFO: count=700 first=144174 curr=146409 min=143411 max=147455 avg=145229 std=1193 p5=143896 median=144492 p95=146860
+
+INFO: Inference timings in us: Init: 71212, First inference: 147604, Warmup (avg): 145386, Inference (avg): 145229
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=60.9336 overall=62.9062
+chunk end: 1086.76 s
+----- chunk 5 (cpu) start 1221.00 s -----
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [700]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/dump/inception_v3.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [1]
+INFO: Loaded model /data/local/tmp/SM/model/dump/inception_v3.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+VERBOSE: Replacing 131 out of 144 node(s) with delegate (TfLiteXNNPackDelegate) node, yielding 25 partitions for subgraph 0.
+INFO: The input model file size (MB): 24.5205
+INFO: Initialized session in 74.423ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 600 seconds.
+INFO: count=10 first=148065 curr=146703 min=143892 max=148065 avg=145406 std=1468 p5=143892 median=146114 p95=148065
+
+INFO: Running benchmark for at least 700 iterations and at least 0 seconds but terminate if exceeding 600 seconds.
+INFO: count=700 first=143987 curr=144227 min=143588 max=147798 avg=145300 std=1225 p5=143961 median=144546 p95=146982
+
+INFO: Inference timings in us: Init: 74423, First inference: 148065, Warmup (avg): 145406, Inference (avg): 145300
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=61.1289 overall=62.9766
+chunk end: 1324.39 s
+----- chunk 7 (cpu) start 1458.80 s -----
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [700]
+INFO: Min runs duration (seconds): [0]
+INFO: Max runs duration (seconds): [600]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [10]
+INFO: Min warmup runs duration (seconds): [1]
+INFO: Graph: [/data/local/tmp/SM/model/dump/inception_v3.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [1]
+INFO: Loaded model /data/local/tmp/SM/model/dump/inception_v3.tflite
+INFO: Initialized TensorFlow Lite runtime.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+VERBOSE: Replacing 131 out of 144 node(s) with delegate (TfLiteXNNPackDelegate) node, yielding 25 partitions for subgraph 0.
+INFO: The input model file size (MB): 24.5205
+INFO: Initialized session in 75.194ms.
+INFO: Running benchmark for at least 10 iterations and at least 1 seconds but terminate if exceeding 600 seconds.
+INFO: count=10 first=148343 curr=146683 min=144163 max=148343 avg=145626 std=1450 p5=144163 median=146364 p95=148343
+
+INFO: Running benchmark for at least 700 iterations and at least 0 seconds but terminate if exceeding 600 seconds.
+INFO: count=700 first=144353 curr=144570 min=142509 max=147525 avg=145317 std=1216 p5=143969 median=144570 p95=146938
+
+INFO: Inference timings in us: Init: 75194, First inference: 148343, Warmup (avg): 145626, Inference (avg): 145317
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=61.2461 overall=63.2188
+chunk end: 1562.20 s
+===== count =====
+chunks: 4 (끊긴 조각 0), count 합: 2800, 본 실행 시간 합 (count x avg): 406.39 s
+first chunk start: 747.01 s, last chunk end: 1695.80 s, total: 948.79 s (부팅 후 경과 시간 기준)
+battery temp at end: 343 (0.1도 단위)
